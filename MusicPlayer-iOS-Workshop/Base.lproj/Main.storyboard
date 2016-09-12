@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlayerViewController" customModule="MusicPlayer_iOS_Workshop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JZf-i6-vlH">
+                                <rect key="frame" x="165" y="165" width="270" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="D81-MI-6QW"/>
+                                    <constraint firstAttribute="height" constant="270" id="vd2-Og-pH5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYC-HA-pUZ">
+                                <rect key="frame" x="80" y="530" width="59" height="30"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="playPreviousSong" destination="kq7-HP-Bx9" eventType="touchUpInside" id="6hL-QL-ZXE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC7-YV-ZFi">
+                                <rect key="frame" x="285" y="530" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playMusic" destination="kq7-HP-Bx9" eventType="touchUpInside" id="Qdw-5o-yk8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a6-pV-hht">
+                                <rect key="frame" x="464" y="530" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="playNextSong" destination="kq7-HP-Bx9" eventType="touchUpInside" id="NAQ-N0-Yz9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eC7-YV-ZFi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3xF-Dq-kos"/>
+                            <constraint firstItem="LYC-HA-pUZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="7VW-86-wnH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eC7-YV-ZFi" secondAttribute="bottom" constant="40" id="BA7-Sn-phT"/>
+                            <constraint firstItem="JZf-i6-vlH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CGX-WX-onz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LYC-HA-pUZ" secondAttribute="bottom" constant="40" id="OCZ-s0-FWj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6a6-pV-hht" secondAttribute="trailing" constant="84" id="cIN-1d-NVX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6a6-pV-hht" secondAttribute="bottom" constant="40" id="hOJ-oD-kcy"/>
+                            <constraint firstItem="JZf-i6-vlH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="viL-rx-cSn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mediaPlayer" destination="kq7-HP-Bx9" id="6rf-tS-Aqo"/>
+                        <outlet property="songImageView" destination="JZf-i6-vlH" id="tw2-Zc-Bg7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="kq7-HP-Bx9" customClass="MediaPlayer" customModule="MusicPlayer_iOS_Workshop" customModuleProvider="target">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="oxo-ZY-LOe"/>
+                    </connections>
+                </customObject>
             </objects>
+            <point key="canvasLocation" x="263" y="323"/>
         </scene>
     </scenes>
 </document>

@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		844A12351D8321DC002BAA0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A12341D8321DC002BAA0C /* AppDelegate.swift */; };
-		844A12371D8321DC002BAA0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A12361D8321DC002BAA0C /* ViewController.swift */; };
+		844A12371D8321DC002BAA0C /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A12361D8321DC002BAA0C /* PlayerViewController.swift */; };
 		844A123A1D8321DC002BAA0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A12381D8321DC002BAA0C /* Main.storyboard */; };
 		844A123C1D8321DC002BAA0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844A123B1D8321DC002BAA0C /* Assets.xcassets */; };
 		844A123F1D8321DC002BAA0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A123D1D8321DC002BAA0C /* LaunchScreen.storyboard */; };
+		844A12471D83290E002BAA0C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A12461D83290E002BAA0C /* Song.swift */; };
+		844A12491D832E29002BAA0C /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A12481D832E29002BAA0C /* MediaPlayer.swift */; };
+		844A124B1D833205002BAA0C /* Ben Pearce - What I Might Do (Kilter Remix).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 844A124A1D833205002BAA0C /* Ben Pearce - What I Might Do (Kilter Remix).mp3 */; };
+		84C2FCD91D833A0D008AA27B /* What So Not - High you are (Branchez Remix).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84C2FCD81D833A0D008AA27B /* What So Not - High you are (Branchez Remix).mp3 */; };
+		84C2FCDF1D833B0B008AA27B /* ASTR - Hold On We're Going Home [Free DL].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84C2FCDE1D833B0B008AA27B /* ASTR - Hold On We're Going Home [Free DL].mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		844A12311D8321DC002BAA0C /* MusicPlayer-iOS-Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusicPlayer-iOS-Workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844A12341D8321DC002BAA0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844A12361D8321DC002BAA0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		844A12361D8321DC002BAA0C /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		844A12391D8321DC002BAA0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844A123B1D8321DC002BAA0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844A123E1D8321DC002BAA0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844A12401D8321DC002BAA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844A12461D83290E002BAA0C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		844A12481D832E29002BAA0C /* MediaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		844A124A1D833205002BAA0C /* Ben Pearce - What I Might Do (Kilter Remix).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ben Pearce - What I Might Do (Kilter Remix).mp3"; sourceTree = "<group>"; };
+		84C2FCD81D833A0D008AA27B /* What So Not - High you are (Branchez Remix).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "What So Not - High you are (Branchez Remix).mp3"; sourceTree = "<group>"; };
+		84C2FCDE1D833B0B008AA27B /* ASTR - Hold On We're Going Home [Free DL].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ASTR - Hold On We're Going Home [Free DL].mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +65,14 @@
 			isa = PBXGroup;
 			children = (
 				844A12341D8321DC002BAA0C /* AppDelegate.swift */,
-				844A12361D8321DC002BAA0C /* ViewController.swift */,
+				844A12361D8321DC002BAA0C /* PlayerViewController.swift */,
+				844A12461D83290E002BAA0C /* Song.swift */,
+				844A12481D832E29002BAA0C /* MediaPlayer.swift */,
 				844A12381D8321DC002BAA0C /* Main.storyboard */,
 				844A123B1D8321DC002BAA0C /* Assets.xcassets */,
+				844A124A1D833205002BAA0C /* Ben Pearce - What I Might Do (Kilter Remix).mp3 */,
+				84C2FCD81D833A0D008AA27B /* What So Not - High you are (Branchez Remix).mp3 */,
+				84C2FCDE1D833B0B008AA27B /* ASTR - Hold On We're Going Home [Free DL].mp3 */,
 				844A123D1D8321DC002BAA0C /* LaunchScreen.storyboard */,
 				844A12401D8321DC002BAA0C /* Info.plist */,
 			);
@@ -122,9 +137,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C2FCD91D833A0D008AA27B /* What So Not - High you are (Branchez Remix).mp3 in Resources */,
 				844A123F1D8321DC002BAA0C /* LaunchScreen.storyboard in Resources */,
+				844A124B1D833205002BAA0C /* Ben Pearce - What I Might Do (Kilter Remix).mp3 in Resources */,
 				844A123C1D8321DC002BAA0C /* Assets.xcassets in Resources */,
 				844A123A1D8321DC002BAA0C /* Main.storyboard in Resources */,
+				84C2FCDF1D833B0B008AA27B /* ASTR - Hold On We're Going Home [Free DL].mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844A12371D8321DC002BAA0C /* ViewController.swift in Sources */,
+				844A12471D83290E002BAA0C /* Song.swift in Sources */,
+				844A12491D832E29002BAA0C /* MediaPlayer.swift in Sources */,
+				844A12371D8321DC002BAA0C /* PlayerViewController.swift in Sources */,
 				844A12351D8321DC002BAA0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +308,7 @@
 				844A12451D8321DC002BAA0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
