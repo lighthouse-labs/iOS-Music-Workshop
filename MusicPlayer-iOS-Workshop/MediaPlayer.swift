@@ -15,7 +15,7 @@ import AVFoundation
 
 class MediaPlayer: NSObject {
     
-    var avPlayer = AVAudioPlayer()
+    var avPlayer = AVPlayer()
     var songIndex = 0
     var songs = [Song]()
     
@@ -35,10 +35,16 @@ class MediaPlayer: NSObject {
         
         let song = songs[songIndex]
         
-        avPlayer = try! AVAudioPlayer(contentsOfURL: song.musicFilePath)
+        avPlayer = AVPlayer(URL: song.musicFilePath)
         avPlayer.play()
         
         delegate?.displaySong(song)
+        
+        let interval = CMTime(seconds: 1, preferredTimescale: 1)
+        avPlayer.addPeriodicTimeObserverForInterval(interval, queue: nil) { (time) in
+            print("inside periodic timer")
+            //add protocol to show % time completed for song.
+        }
     }
     
     @IBAction func playNextSong(){
@@ -60,5 +66,7 @@ class MediaPlayer: NSObject {
         
         playMusic()
     }
+    
+    
 
 }

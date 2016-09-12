@@ -11,7 +11,6 @@ import UIKit
 class PlayerViewController: UIViewController, MediaPlayerProtocol {
     
     @IBOutlet var mediaPlayer: MediaPlayer!
-    @IBOutlet weak var songImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +20,10 @@ class PlayerViewController: UIViewController, MediaPlayerProtocol {
     }
     
     func displaySong(song: Song) {
-        songImageView.image = song.image
+        
     }
+    
+    
     
 }
 

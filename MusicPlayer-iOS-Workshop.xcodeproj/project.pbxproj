@@ -70,13 +70,21 @@
 				844A12481D832E29002BAA0C /* MediaPlayer.swift */,
 				844A12381D8321DC002BAA0C /* Main.storyboard */,
 				844A123B1D8321DC002BAA0C /* Assets.xcassets */,
-				844A124A1D833205002BAA0C /* Ben Pearce - What I Might Do (Kilter Remix).mp3 */,
-				84C2FCD81D833A0D008AA27B /* What So Not - High you are (Branchez Remix).mp3 */,
-				84C2FCDE1D833B0B008AA27B /* ASTR - Hold On We're Going Home [Free DL].mp3 */,
+				84F0526A1D875CC400DB90DF /* Songs */,
 				844A123D1D8321DC002BAA0C /* LaunchScreen.storyboard */,
 				844A12401D8321DC002BAA0C /* Info.plist */,
 			);
 			path = "MusicPlayer-iOS-Workshop";
+			sourceTree = "<group>";
+		};
+		84F0526A1D875CC400DB90DF /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				844A124A1D833205002BAA0C /* Ben Pearce - What I Might Do (Kilter Remix).mp3 */,
+				84C2FCD81D833A0D008AA27B /* What So Not - High you are (Branchez Remix).mp3 */,
+				84C2FCDE1D833B0B008AA27B /* ASTR - Hold On We're Going Home [Free DL].mp3 */,
+			);
+			name = Songs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
