@@ -11,6 +11,7 @@ import AVFoundation
 
 @objc protocol MediaPlayerProtocol{
     func displaySong(song: Song)
+    func displayCompletionPercentage(percentComplete: Float)
 }
 
 class MediaPlayer: NSObject {
@@ -41,9 +42,16 @@ class MediaPlayer: NSObject {
         delegate?.displaySong(song)
         
         let interval = CMTime(seconds: 1, preferredTimescale: 1)
-        avPlayer.addPeriodicTimeObserverForInterval(interval, queue: nil) { (time) in
-            print("inside periodic timer")
-            //add protocol to show % time completed for song.
+        avPlayer.addPeriodicTimeObserverForInterval(interval, queue: nil) { (currentTime) in
+            
+            if let duration = self.avPlayer.currentItem?.duration {
+                let durationInSeconds = CMTimeGetSeconds(duration)
+                let currentTimeInSeconds = CMTimeGetSeconds(currentTime)
+                
+                let currentProgress = Float(currentTimeInSeconds/durationInSeconds)
+                self.delegate?.displayCompletionPercentage(currentProgress)
+
+            }
         }
     }
     
