@@ -13,9 +13,9 @@ class Song: NSObject {
     let artist:String
     let title:String
     let image:UIImage
-    let musicFilePath:NSURL
+    let musicFilePath:URL
     
-    init(artist:String, title:String, image:UIImage, musicFilePath:NSURL){
+    init(artist:String, title:String, image:UIImage, musicFilePath:URL){
         self.artist = artist
         self.title = title
         self.image = image

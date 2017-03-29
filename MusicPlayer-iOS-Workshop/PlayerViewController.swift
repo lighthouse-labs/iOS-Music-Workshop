@@ -21,11 +21,11 @@ class PlayerViewController: UIViewController, MediaPlayerProtocol {
         
     }
     
-    func displaySong(song: Song) {
+    func displaySong(_ song: Song) {
     
     }
     
-    func displayCompletionPercentage(percentComplete: Float) {
+    func displayCompletionPercentage(_ percentComplete: Float) {
 
     }
 }
